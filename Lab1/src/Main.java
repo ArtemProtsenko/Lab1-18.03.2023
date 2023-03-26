@@ -16,16 +16,16 @@ public class Main
         System.out.println("C5 = " + 24 % 5 + ", O2 = '-'.");
         System.out.println("C7 = " + 24 % 7 + ", i and j - 'long'.");
 
-        System.out.println("Enter a: ");
+        System.out.print("Enter a: ");
         String strA = myScanner.nextLine();
 
-        System.out.println("Enter n: ");
+        System.out.print("Enter n: ");
         String strN = myScanner.nextLine();
 
-        System.out.println("Enter b: ");
+        System.out.print("Enter b: ");
         String strB = myScanner.nextLine();
 
-        System.out.println("Enter m: ");
+        System.out.print("Enter m: ");
         String strM = myScanner.nextLine();
 
         if (strA.matches("[0-9]+") && strN.matches("[0-9]+") && strB.matches("[0-9]+") && strM.matches("[0-9]+"))
@@ -42,7 +42,7 @@ public class Main
             }
             else
             {
-                for(long i = a; i <= n; i++)
+                for(long i = a; i <= n && !hasError; i++)
                 {
                     for(long j = b; j <= m; j++)
                     {
