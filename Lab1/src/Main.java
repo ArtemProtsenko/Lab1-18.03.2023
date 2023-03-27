@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class Main
 {
+    static boolean isNumber(String string)
+    {
+        return string.matches("^-?\\d+$");
+    }
     public static void main(String[] args)
     {
         Scanner myScanner = new Scanner(System.in);
@@ -28,7 +32,7 @@ public class Main
         System.out.print("Enter m: ");
         String strM = myScanner.nextLine();
 
-        if (strA.matches("[0-9]+") && strN.matches("[0-9]+") && strB.matches("[0-9]+") && strM.matches("[0-9]+"))
+        if (isNumber(strA) && isNumber(strN) && isNumber(strB) && isNumber(strM))
         {
             long a = Long.parseLong(strA);
             long n = Long.parseLong(strN);
